@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARANG.PortFolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-flex">
+            <div class="logo">SARANG.PortFolio</div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+
+                <div class="lang-wrapper">
+                    <span class="lang-label">Language :</span>
+                    <div class="custom-select-wrapper">
+                        <div class="custom-select-trigger" onclick="toggleDropdown(event)">
+                            <img src="images/flag-kr.svg" alt="KR" id="current-flag">
+                            <span id="current-lang-text">KR</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="custom-options" id="lang-options">
+                            <div class="custom-option" onclick="selectLang('ko')">
+                                <img src="images/flag-kr.svg" alt="KR"> <span>KR</span>
+                            </div>
+                            <div class="custom-option" onclick="selectLang('jp')">
+                                <img src="images/flag-jp.svg" alt="JP"> <span>JP</span>
+                            </div>
+                            <div class="custom-option" onclick="selectLang('en')">
+                                <img src="images/flag-us.svg" alt="EN"> <span>EN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h3 class="fade-in" data-i18n="home-greeting">안녕하세요</h3>
+            <h1 data-i18n="home-title">프론트엔드 개발자 <span>김사랑</span>입니다.</h1>
+            <a href="#about" class="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <section id="about" class="reveal">
+        <div class="container">
+            <h2 class="title">ABOUT ME</h2>
+            <div class="about-grid">
+                <div class="info-card"><i class="fas fa-user"></i> <h3>Name</h3><p data-i18n="about-name">김사랑</p></div>
+                <div class="info-card"><i class="fas fa-birthday-cake"></i> <h3>Birth</h3><p>1996.12.13</p></div>
+                <div class="info-card"><i class="fas fa-envelope"></i> <h3>Email</h3><p>lovoo5854@gmail.com</p></div>
+                <div class="info-card"><i class="fas fa-school"></i> <h3>Education</h3><p data-i18n="about-school">숭실대학교 졸업</p></div>
+                <div class="info-card"><i class="fas fa-face-smile"></i> <h3>Hobby</h3><p data-i18n="about-hobby">달리기, 요리</p></div>
+                <div class="info-card"><i class="fas fa-language"></i> <h3>Language</h3>
+                     <p data-i18n="lang-ko">한국어(원어민)</p>
+                     <p data-i18n="lang-jp">일본어(비즈니스)</p>
+                     <p data-i18n="lang-en">영어(간단한 회화)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+    <div class="container">
+        <h2 class="title">SKILLS</h2>
+        <div class="skills-wrap">
+            <div class="skill-category">
+                <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <p>React, JavaScript, HTML/CSS, GeneXus</p>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-cloud-upload-alt"></i> Deployment</h3>
+                <p>AWS, Docker</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="careers" class="reveal">
+    <div class="container">
+        <h2 class="title">CAREER</h2>
+        
+        <div class="career-card">
+            <div class="career-header">
+                <div class="company-info">
+                    <h3 class="company-name">㈱ Q'sfix</h3>
+                    <p class="working-period">2024.04 ~ 2026.03</p>
+                </div>
+                             
+                <div class="tech-stack-tags">
+                    <span class="tag frontend">Frontend</span>
+                    <span class="tag solution">GeneXus</span>
+                    <span class="tag solution">HTML/CSS</span>
+                    <span class="tag solution">JavaScript</span>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="task-list">
+                <div class="task-item">
+                    <h4 class="task-title" data-i18n="career-project1">시약관리 시스템 화면 개발</h4>
+                    <p class="task-date">2025.03 ~ 2026.03</p>
+                    <p class="task-desc" data-i18n="career-project1detail">
+                        각종 약물의 재고확인과 주문, 신 약물의 추가 및 등록 등, 시약회사에서 쓰이는 웹페이지 개발
+                    </p>
+                </div>
+
+                <div class="task-item">
+                    <h4 class="task-title" data-i18n="career-project2">컨테스트 참여 및 관리 화면 개발</h4>
+                    <p class="task-date">2024.07 ~ 2025.02</p>
+                    <p class="task-desc" data-i18n="career-project2detail">
+                      행사에 주제에 맞는 사진을 유저가 업로드하고 관리자가 심사를 거쳐 순위를 매기는 컨테스트 화면 개발
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>© Thanks for reading.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

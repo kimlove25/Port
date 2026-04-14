@@ -1,0 +1,172 @@
+/* 기본 초기화 및 폰트 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Pretendard', sans-serif; background-color: #fcfcfc; color: #333; line-height: 1.7; scroll-behavior: smooth; overflow-x: hidden; }
+.container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+/* 네비게이션 (고정형) */
+#navbar { background: rgba(255, 255, 255, 0.95); height: 80px; position: sticky; top: 0; z-index: 999; display: flex; align-items: center; border-bottom: 1px solid #eee; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-size: 1.6rem; font-weight: 900; letter-spacing: -1px; }
+
+.nav-right { display: flex; align-items: center; gap: 40px; }
+.nav-links { display: flex; list-style: none; gap: 25px; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: #007bff; }
+
+/* 언어 선택기 디자인 */
+.lang-wrapper { display: flex; align-items: center; gap: 10px; border-left: 1px solid #ddd; padding-left: 25px; }
+.lang-label { font-size: 13px; color: #888; }
+.custom-select-wrapper { position: relative; }
+.custom-select-trigger { display: flex; align-items: center; gap: 8px; padding: 6px 14px; background: #f0f0f0; border-radius: 30px; cursor: pointer; font-size: 13px; font-weight: bold; }
+.custom-select-trigger img { width: 18px; border-radius: 2px; }
+.custom-options { position: absolute; top: 130%; right: 0; background: #fff; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: none; min-width: 100px; overflow: hidden; }
+.custom-options.show { display: block; animation: fadeIn 0.2s; }
+.custom-option { display: flex; align-items: center; gap: 10px; padding: 12px; transition: 0.2s; cursor: pointer; }
+.custom-option:hover { background: #f8f9fa; }
+.custom-option img { width: 18px; }
+
+/* 섹션 공통 스타일 */
+section { padding: 120px 0; }
+.title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; font-weight: 800; }
+
+/* 홈 섹션 */
+#home { height: calc(100vh - 80px); display: flex; align-items: center; justify-content: center; text-align: center; background: #fff; }
+#home h1 { font-size: 3.5rem; margin-top: 10px; }
+#home h1 span { color: #007bff; }
+.scroll-btn { font-size: 2rem; color: #ccc; margin-top: 50px; display: block; animation: bounce 2s infinite; }
+
+/* 카드 레이아웃 (About/Skills) */
+.about-grid, .skills-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.info-card, .skill-category, .career-item { background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid #f0f0f0; transition: transform 0.3s; }
+.info-card:hover { transform: translateY(-10px); }
+.info-card i { font-size: 2.5rem; color: #007bff; margin-bottom: 20px; }
+/* 카드 사이의 여백 추가 */
+.career-list {
+    margin-bottom: 30px; /* 카드와 카드 사이의 간격 */
+}
+
+/* 카드 전체를 중앙 정렬 */
+.skill-category {
+    text-align: center; /* 내부의 모든 텍스트(p태그 포함)를 중앙으로 */
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+}
+
+/* 제목과 아이콘 정렬 */
+.skill-category h3 {
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 아이콘과 텍스트 묶음을 가로 중앙으로 */
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* 스킬 리스트 텍스트 정렬 */
+.skill-category p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto; /* 블록 요소일 경우 중앙 배치 */
+    max-width: 80%; /* 텍스트가 너무 길어지면 적당히 줄바꿈 되도록 설정 (선택 사항) */
+}
+
+/* 마지막 카드는 여백이 필요 없으므로 제거 */
+.career-list:last-child {
+    margin-bottom: 0;
+}
+
+footer { padding: 50px 0; text-align: center; background: #222; color: #777; font-size: 14px; }
+
+/* Career 섹션 전체 카드 */
+.career-card {
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    text-align: left; /* 텍스트는 왼쪽 정렬 */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 회사 헤더 부분 */
+.company-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.working-period {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* 기술 태그 스타일 (알약 모양) */
+.tech-stack-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tag.frontend { background: #e7f3ff; color: #007bff; }
+.tag.solution { background: #f1f3f5; color: #495057; }
+
+/* 구분선 */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+/* 상세 업무 리스트 스타일 */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 업무 간 간격 (이미지처럼 여백을 줌) */
+}
+
+.task-item {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid #f0f0f0; /* 왼쪽에 연한 줄을 그어 리스트 느낌 강조 */
+}
+
+.task-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.task-date {
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.task-desc {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
