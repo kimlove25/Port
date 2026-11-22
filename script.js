@@ -39,7 +39,7 @@ const translations = {
     //한국어 번역
     ko: {
         "home-greeting": "안녕하세요",
-        "home-title": "프론트엔드 개발자 <span>김사랑</span>입니다.",
+        "home-title": "개발자 <span>김사랑</span>입니다.",
         "about-title": "ABOUT ME",
         "about-name": "김사랑",
         "about-school": "숭실대학교 졸업",
@@ -55,7 +55,7 @@ const translations = {
     //일본어 번역
     jp: {
         "home-greeting": "はじめまして",
-        "home-title": "フロントエンドエンジニア <span>キム・サラン</span>です。",
+        "home-title": "エンジニア <span>キム・サラン</span>です。",
         "about-name": "キム・サラン",
         "career-title": "試薬管理システムの画面開発",
         "about-school": "崇実大学校 卒業",
@@ -71,7 +71,7 @@ const translations = {
     //영어 번역
     en: {
         "home-greeting": "Hello",
-        "home-title": "I am <span>Sarang Kim</span>, a Frontend Developer.",
+        "home-title": "I am <span>Sarang Kim</span>, a Developer.",
         "about-name": "Sarang Kim",
         "career-title": "Reagent Management System Development",
          "about-school": "Graduated from Soongsil University",
